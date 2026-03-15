@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | BlackForgeX — Our Work in Akola, Maharashtra</title>
+  <meta name="description" content="Explore BlackForgeX's portfolio of software development projects — ERPs, mobile apps, IoT systems, and web platforms built for Indian businesses." />
+  <link rel="canonical" href="https://blackforgex.group/projects.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      justify-content: center;
+    }
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 0.4rem 1.1rem;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--accent);
+      color: var(--accent-2);
+      background: var(--accent-pulse);
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .project-card:hover {
+      border-color: var(--border-bright);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-card);
+    }
+    .project-thumb {
+      height: 180px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .project-thumb-icon { font-size: 3.5rem; position: relative; z-index: 1; }
+    .project-thumb-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-secondary);
+    }
+    .project-thumb-glow {
+      position: absolute;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      opacity: 0.4;
+      transition: opacity 0.3s;
+    }
+    .project-card:hover .project-thumb-glow { opacity: 0.8; }
+    .project-body { padding: 1.5rem; }
+    .project-cat {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.5rem;
+    }
+    .project-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+    .project-body p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1rem; }
+    .project-result {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--forge-green);
+      background: rgba(63,185,80,0.08);
+      border: 1px solid rgba(63,185,80,0.2);
+      border-radius: 4px;
+      padding: 0.3rem 0.7rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .project-card.hidden { display: none; }
+
+    @media (max-width: 1024px) { .projects-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-logo">BLACK<span>FORGE</span>X</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-text">Loading projects...</div>
+</div>
+
+<canvas id="particle-canvas"></canvas>
+
+<nav>
+  <a href="index.html" class="nav-logo">BLACK<span class="forge">FORGE</span>X<span class="pvt">Pvt Ltd</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">☀️</button>
+    <a href="contact.html" class="nav-cta">Get Quote</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="projects.html">Projects</a>
+  <a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="nav-cta">Get Free Quote →</a>
+</nav>
+
+<div class="page-content">
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Projects</div>
+    <span class="section-eyebrow">// Our Work</span>
+    <h1 class="section-title" style="font-size: clamp(2.5rem,5vw,4rem);">Projects That Made<br>a Difference</h1>
+    <p class="section-sub">Real solutions, real results. Here's what we've built for businesses across Maharashtra and India.</p>
+  </div>
+</div>
+
+<section>
+  <div class="max-w">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="software">Custom Software</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="iot">IoT</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card reveal" data-category="software">
+        <div class="project-thumb">
+          <div class="project-thumb-bg"></div>
+          <div class="project-thumb-glow" style="background: radial-gradient(circle, rgba(56,139,253,0.4), transparent);"></div>
+          <div class="project-thumb-icon">🏭</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Custom Software · ERP</div>
+          <h3>Sharma Industries ERP</h3>
+          <p>Full inventory, billing, and HR management system replacing 6 spreadsheets for a manufacturing unit in Akola.</p>
+          <div class="project-result">↑ 20 hrs/week saved</div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">PostgreSQL</span><span class="tag">React</span></div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card reveal reveal-delay-1" data-category="web">
+        <div class="project-thumb">
+          <div class="project-thumb-bg"></div>
+          <div class="project-thumb-glow" style="background: radial-gradient(circle, rgba(247,129,102,0.3), transparent);"></div>
+          <div class="project-thumb-icon">🛒</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Web · E-Commerce</div>
+          <h3>Mehta Organics Store</h3>
+          <p>Full-featured e-commerce platform with product catalog, UPI/card payments, and order tracking for organic products.</p>
+          <div class="project-result">↑ 340% sales in Q1</div>
+          <div class="tags"><span class="tag">Next.js</span><span class="tag">Razorpay</span><span class="tag">Node.js</span></div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card reveal reveal-delay-2" data-category="iot">
+        <div class="project-thumb">
+          <div class="project-thumb-bg"></div>
+          <div class="project-thumb-glow" style="background: radial-gradient(circle, rgba(63,185,80,0.3), transparent);"></div>
+          <div class="project-thumb-icon">🌾</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">IoT · Agriculture</div>
+          <h3>Smart Farm Monitor</h3>
+          <p>Real-time soil moisture, temperature, and humidity monitoring with automated irrigation control for a 50-acre farm.</p>
+          <div class="project-result">↓ 35% water usage</div>
+          <div class="tags"><span class="tag">Arduino</span><span class="tag">MQTT</span><span class="tag">Flutter</span></div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card reveal" data-category="mobile">
+        <div class="project-thumb">
+          <div class="project-thumb-bg"></div>
+          <div class="project-thumb-glow" style="background: radial-gradient(circle, rgba(56,139,253,0.4), transparent);"></div>
+          <div class="project-thumb-icon">🚚</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Mobile · Logistics</div>
+          <h3>VidarbhaLogix App</h3>
+          <p>Fleet tracking and delivery management app for a regional logistics company. Real-time GPS, driver app, and customer portal.</p>
+          <div class="project-result">↑ 28% delivery efficiency</div>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">Google Maps</span><span class="tag">Firebase</span></div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card reveal reveal-delay-1" data-category="ai">
+        <div class="project-thumb">
+          <div class="project-thumb-bg"></div>
+          <div class="project-thumb-glow" style="background: radial-gradient(circle, rgba(247,129,102,0.3), transparent);"></div>
+          <div class="project-thumb-icon">🤖</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">AI · Customer Service</div>
+          <h3>RetailBot — AI Support</h3>
+          <p>WhatsApp chatbot trained on product catalog for a retail chain. Handles 70% of customer queries without human intervention.</p>
+          <div class="project-result">↓ 70% support tickets</div>
+          <div class="tags"><span class="tag">OpenAI</span><span class="tag">WhatsApp API</span><span class="tag">Node.js</span></div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card reveal reveal-delay-2" data-category="software">
+        <div class="project-thumb">
+          <div class="project-thumb-bg"></div>
+          <div class="project-thumb-glow" style="background: radial-gradient(circle, rgba(63,185,80,0.3), transparent);"></div>
+          <div class="project-thumb-icon">🏥</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Custom Software · Healthcare</div>
+          <h3>Clinic Management System</h3>
+          <p>Patient records, appointment scheduling, billing, and prescription management for a multi-doctor clinic in Akola.</p>
+          <div class="project-result">↑ 3x more patients/day</div>
+          <div class="tags"><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">React</span></div>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="project-card reveal" data-category="web">
+        <div class="project-thumb">
+          <div class="project-thumb-bg"></div>
+          <div class="project-thumb-glow" style="background: radial-gradient(circle, rgba(56,139,253,0.4), transparent);"></div>
+          <div class="project-thumb-icon">📚</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Web · EdTech</div>
+          <h3>LearnVidarbha Platform</h3>
+          <p>Online learning platform for regional coaching classes — video lectures, quizzes, live sessions, and student analytics.</p>
+          <div class="project-result">500+ students enrolled</div>
+          <div class="tags"><span class="tag">Next.js</span><span class="tag">WebRTC</span><span class="tag">AWS S3</span></div>
+        </div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="project-card reveal reveal-delay-1" data-category="iot">
+        <div class="project-thumb">
+          <div class="project-thumb-bg"></div>
+          <div class="project-thumb-glow" style="background: radial-gradient(circle, rgba(247,129,102,0.3), transparent);"></div>
+          <div class="project-thumb-icon">⚡</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">IoT · Energy</div>
+          <h3>Factory Power Monitor</h3>
+          <p>Smart energy monitoring system for a textile factory — per-machine power tracking with anomaly alerts and cost reports.</p>
+          <div class="project-result">↓ 22% electricity bill</div>
+          <div class="tags"><span class="tag">ESP32</span><span class="tag">InfluxDB</span><span class="tag">Grafana</span></div>
+        </div>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="project-card reveal reveal-delay-2" data-category="mobile">
+        <div class="project-thumb">
+          <div class="project-thumb-bg"></div>
+          <div class="project-thumb-glow" style="background: radial-gradient(circle, rgba(63,185,80,0.3), transparent);"></div>
+          <div class="project-thumb-icon">🏋️</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Mobile · Fitness</div>
+          <h3>FitAkola App</h3>
+          <p>Gym management + member fitness tracking app. Attendance via QR, workout logs, trainer scheduling, and fee reminders.</p>
+          <div class="project-result">200+ active members</div>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Stripe</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 4rem;" class="reveal">
+      <p style="color:var(--text-secondary); margin-bottom: 1.5rem;">Have a project in mind? Let's talk.</p>
+      <a href="contact.html" class="btn btn-primary">Start Your Project →</a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="nav-logo" style="font-size:1.3rem;">BLACK<span class="forge">FORGE</span>X</a>
+      <p class="footer-brand-desc">Akola's premier software development company.</p>
+    </div>
+    <div class="footer-col"><span class="footer-col-title">Services</span><ul>
+      <li><a href="services.html">Custom Software</a></li><li><a href="services.html">Web Development</a></li>
+      <li><a href="services.html">Mobile Apps</a></li><li><a href="services.html">IoT Solutions</a></li>
+    </ul></div>
+    <div class="footer-col"><span class="footer-col-title">Company</span><ul>
+      <li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><span class="footer-col-title">Contact</span><ul>
+      <li><a href="tel:+918308966290">+91 83089 66290</a></li>
+      <li><a href="mailto:atharva.sunil.zade@gmail.com">atharva.sunil.zade@gmail.com</a></li>
+      <li>Jatharpeth, Akola, MH 444005</li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 BlackForgeX Private Limited. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="#" class="social-btn">in</a><a href="#" class="social-btn">𝕏</a>
+      <a href="#" class="social-btn">ig</a><a href="https://wa.me/918308966290" class="social-btn">wa</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/918308966290?text=Hi%20BlackForgeX%2C%20I%20want%20to%20discuss%20a%20project." class="whatsapp-btn" target="_blank" rel="noopener">
+  <span class="wa-tooltip">Chat with us!</span>💬
+</a>
+
+<script src="js/main.js"></script>
+<script>
+  // Portfolio filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      projectCards.forEach(card => {
+        const match = filter === 'all' || card.dataset.category === filter;
+        card.classList.toggle('hidden', !match);
+      });
+    });
+  });
+</script>
+</body>
+</html>

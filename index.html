@@ -1,656 +1,331 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>BlackForgeX | Best Software Development Company in Akola, Maharashtra</title>
+<meta name="description" content="BlackForgeX is Akola's leading software development company. Custom software, web apps, mobile development, IoT solutions & IT consulting. Serving Maharashtra & India."/>
+<meta name="keywords" content="software development company Akola,IT company Maharashtra,custom software India,web development Akola,mobile app development,IoT solutions,BlackForgeX"/>
+<link rel="canonical" href="https://blackforgex.group/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="BlackForgeX | #1 Software Development in Akola"/>
+<meta property="og:description" content="Custom software, web & mobile apps, IoT — built in Akola, trusted across India."/>
+<meta property="og:url" content="https://blackforgex.group/"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"BlackForgeX Private Limited","url":"https://blackforgex.group","telephone":"+91-8308966290","email":"atharva.sunil.zade@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Balaji Heights, Near Hedgewar Blood Bank, Jatharpeth","addressLocality":"Akola","addressRegion":"Maharashtra","postalCode":"444005","addressCountry":"IN"},"foundingDate":"2026","areaServed":"IN"}</script>
+<link rel="stylesheet" href="css/styles.css"/>
+<style>
+/* ── Hero ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--nav-h) + 3rem) 5% 5rem;position:relative;z-index:1;overflow:hidden}
+.hero-inner{max-width:1280px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem}
+.hero-eyebrow{font-family:var(--font-m);font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:.25em;display:flex;align-items:center;gap:.6rem;margin-bottom:1.5rem}
+.hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:hdot 1.5s ease infinite}
+@keyframes hdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.6)}}
+.hero h1{font-family:var(--font-h);font-size:clamp(2.8rem,5vw,4.2rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;margin-bottom:1.5rem}
+.hero h1 .accent{color:var(--accent2)}
+.hero h1 .forge{color:var(--forge)}
+.hero-sub{color:var(--text2);font-size:1.1rem;line-height:1.75;max-width:480px;margin-bottom:2.5rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:3.5rem}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;border-top:1px solid var(--border);padding-top:2rem}
+.stat-num{font-family:var(--font-h);font-size:2rem;font-weight:800;color:var(--accent2)}
+.stat-lbl{font-size:.8rem;color:var(--text3);margin-top:.2rem;font-family:var(--font-m);text-transform:uppercase;letter-spacing:.1em}
 
-  <!-- ══ PRIMARY SEO ══ -->
-  <title>BlackForgeX Private Limited | Custom Software Development, IoT & IT Support — Akola, Maharashtra</title>
-  <meta name="description" content="BlackForgeX Private Limited is a software & hardware technology company in Akola, Maharashtra. We build custom software, IoT solutions, IT support, web apps, mobile apps & enterprise tech. Get a free consultation today." />
-  <meta name="keywords" content="software company Akola, IT company Maharashtra, custom software development Akola, web development Akola, mobile app development Maharashtra, IoT solutions India, IT consulting Akola, hardware tech Vidarbha, software support Akola, tech company Akola, BlackForgeX, enterprise software Maharashtra, IT support Akola, software agency India, embedded systems Maharashtra, startup tech Akola, website development Akola, app development Maharashtra, cloud solutions India, digital transformation Maharashtra" />
-  <meta name="author" content="BlackForgeX Private Limited" />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow" />
-  <link rel="canonical" href="https://blackforgex.group/" />
-  <meta name="geo.region" content="IN-MH" />
-  <meta name="geo.placename" content="Akola, Maharashtra" />
-  <meta name="geo.position" content="20.7002;77.0082" />
-  <meta name="ICBM" content="20.7002, 77.0082" />
-  <meta name="language" content="English" />
-  <meta name="revisit-after" content="7 days" />
-  <meta name="rating" content="general" />
+/* Hero Visual */
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-orb{width:460px;height:460px;border-radius:50%;background:radial-gradient(circle at 35% 40%,rgba(59,130,246,.25),rgba(249,115,22,.08) 50%,transparent 70%);position:relative;display:flex;align-items:center;justify-content:center}
+.hero-orb::before{content:'';position:absolute;inset:-2px;border-radius:50%;border:1px solid var(--border2);animation:orbSpin 18s linear infinite}
+.hero-orb::after{content:'';position:absolute;inset:-30px;border-radius:50%;border:1px dashed rgba(59,130,246,.1);animation:orbSpin 28s linear infinite reverse}
+@keyframes orbSpin{to{transform:rotate(360deg)}}
+.hero-card-float{background:var(--card);border:1px solid var(--border2);border-radius:16px;padding:1.2rem 1.5rem;position:absolute;display:flex;align-items:center;gap:.75rem;box-shadow:0 16px 40px rgba(0,0,0,.35);backdrop-filter:blur(12px)}
+.hero-card-float.c1{top:10%;left:0;animation:float1 4s ease-in-out infinite}
+.hero-card-float.c2{bottom:15%;right:0;animation:float2 5s ease-in-out infinite}
+.hero-card-float.c3{bottom:35%;left:5%;animation:float3 4.5s ease-in-out infinite}
+@keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+@keyframes float3{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.float-icon{width:40px;height:40px;border-radius:10px;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.float-text strong{display:block;font-size:.85rem;font-weight:600;color:var(--text)}
+.float-text span{font-family:var(--font-m);font-size:.68rem;color:var(--text3)}
+.orb-center{font-family:var(--font-h);font-size:2.5rem;font-weight:800;letter-spacing:-.04em;text-align:center;line-height:1}
+.orb-center span{display:block;font-size:.7rem;font-family:var(--font-m);font-weight:400;letter-spacing:.2em;color:var(--text3);text-transform:uppercase;margin-top:.5rem}
 
-  <!-- ══ OPEN GRAPH ══ -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://blackforgex.group/" />
-  <meta property="og:title" content="BlackForgeX Pvt Ltd | Software, IoT & IT Solutions — Akola" />
-  <meta property="og:description" content="Top-rated software & hardware technology company in Akola, Maharashtra. Custom software, IoT systems, IT consulting & support. Established Feb 2026." />
-  <meta property="og:image" content="https://blackforgex.group/og-image.jpg" />
-  <meta property="og:site_name" content="BlackForgeX Private Limited" />
-  <meta property="og:locale" content="en_IN" />
+/* Services Section */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1280px;margin:0 auto}
+.srv-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius2);padding:2rem;position:relative;overflow:hidden;transition:all .35s var(--ease);cursor:default}
+.srv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--forge));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.srv-card:hover{transform:translateY(-6px);border-color:var(--border2);box-shadow:0 20px 48px -12px rgba(0,0,0,.5)}
+.srv-card:hover::before{transform:scaleX(1)}
+.srv-icon{width:52px;height:52px;border-radius:12px;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.25rem}
+.srv-card h3{font-family:var(--font-h);font-size:1.1rem;font-weight:700;margin-bottom:.6rem}
+.srv-card p{color:var(--text2);font-size:.9rem;line-height:1.65;margin-bottom:1.25rem}
+.srv-tags{display:flex;flex-wrap:wrap;gap:.4rem}
 
-  <!-- ══ TWITTER ══ -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BlackForgeX Pvt Ltd | Software & IT Solutions — Akola" />
-  <meta name="twitter:description" content="Custom software, IoT & IT consulting from Akola, Maharashtra. Building tomorrow's tech today." />
-  <meta name="twitter:image" content="https://blackforgex.group/og-image.jpg" />
+/* Marquee */
+.marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);padding:1.2rem 0;position:relative;z-index:1}
+.marquee-track{display:flex;gap:2.5rem;animation:marquee 22s linear infinite;width:max-content}
+.marquee-item{font-family:var(--font-m);font-size:.78rem;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:.6rem}
+.marquee-item::before{content:'◆';color:var(--accent);font-size:.5rem}
+@keyframes marquee{to{transform:translateX(-50%)}}
 
-  <!-- ══ SCHEMA.ORG STRUCTURED DATA ══ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://blackforgex.group/#organization",
-        "name": "BlackForgeX Private Limited",
-        "alternateName": "BlackForgeX",
-        "url": "https://blackforgex.group",
-        "logo": "https://blackforgex.group/logo.png",
-        "foundingDate": "2026-02",
-        "description": "BlackForgeX Private Limited is a software and hardware technology company based in Akola, Maharashtra, offering custom software development, IoT solutions, web & mobile app development, and IT consulting and support services.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Balaji Heights, Near Hedgewar Blood Bank, Jatharpeth",
-          "addressLocality": "Akola",
-          "addressRegion": "Maharashtra",
-          "postalCode": "444005",
-          "addressCountry": "IN"
-        },
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "telephone": "+91-8308966290",
-          "email": "atharva.sunil.zade@gmail.com",
-          "contactType": "Customer Service",
-          "areaServed": "IN",
-          "availableLanguage": ["English","Hindi","Marathi"]
-        }],
-        "areaServed": { "@type": "Country", "name": "India" },
-        "serviceType": ["Custom Software Development","IoT Solutions","IT Consulting","Web Development","Mobile App Development","Hardware Solutions","IT Support"]
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://blackforgex.group/#localbusiness",
-        "name": "BlackForgeX Private Limited",
-        "image": "https://blackforgex.group/og-image.jpg",
-        "url": "https://blackforgex.group",
-        "telephone": "+91-8308966290",
-        "email": "atharva.sunil.zade@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Balaji Heights, Near Hedgewar Blood Bank, Jatharpeth",
-          "addressLocality": "Akola",
-          "addressRegion": "Maharashtra",
-          "postalCode": "444005",
-          "addressCountry": "IN"
-        },
-        "geo": { "@type": "GeoCoordinates", "latitude": 20.7002, "longitude": 77.0082 },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-          "opens": "09:00", "closes": "19:00"
-        },
-        "priceRange": "₹₹",
-        "currenciesAccepted": "INR",
-        "paymentAccepted": "Cash, Bank Transfer, UPI"
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://blackforgex.group/#website",
-        "url": "https://blackforgex.group",
-        "name": "BlackForgeX Private Limited",
-        "description": "Software, IoT & IT Solutions — Akola, Maharashtra",
-        "publisher": { "@id": "https://blackforgex.group/#organization" }
-      }
-    ]
-  }
-  </script>
+/* Why Us */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:900px;margin:0 auto}
+.why-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius2);padding:2rem;display:flex;gap:1.25rem;align-items:flex-start;transition:all .35s}
+.why-item:hover{border-color:var(--border2);transform:translateX(4px)}
+.why-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(59,130,246,.15),rgba(249,115,22,.08));border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.why-item h3{font-family:var(--font-h);font-size:1rem;font-weight:700;margin-bottom:.4rem}
+.why-item p{color:var(--text2);font-size:.875rem;line-height:1.65}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+/* CTA */
+.cta-box{background:linear-gradient(135deg,var(--card) 0%,rgba(59,130,246,.08) 100%);border:1px solid var(--border2);border-radius:var(--radius2);padding:4rem 3rem;text-align:center;max-width:800px;margin:0 auto;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;top:-60px;right:-60px;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.12),transparent 70%);pointer-events:none}
+.cta-box h2{font-family:var(--font-h);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.025em;margin-bottom:1rem}
+.cta-box p{color:var(--text2);font-size:1rem;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 
-  <style>
-    :root {
-      --black:      #040203;
-      --deep:       #0c0608;
-      --card:       #110709;
-      --border:     rgba(220,30,30,0.18);
-      --red:        #e01c1c;
-      --red-bright: #ff2626;
-      --red-dim:    rgba(220,30,30,0.55);
-      --red-glow:   rgba(220,30,30,0.12);
-      --orange:     #ff6a00;
-      --white:      #f5e8e8;
-      --muted:      rgba(245,232,232,0.42);
-      --font-d: 'Orbitron', monospace;
-      --font-b: 'Rajdhani', sans-serif;
-      --font-m: 'Share Tech Mono', monospace;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--black); color: var(--white);
-      font-family: var(--font-b); font-size: 17px; line-height: 1.65;
-      overflow-x: hidden;
-    }
-    body::before {
-      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
-      background-image: linear-gradient(rgba(220,30,30,0.04) 1px,transparent 1px), linear-gradient(90deg,rgba(220,30,30,0.04) 1px,transparent 1px);
-      background-size: 60px 60px;
-    }
-    body::after {
-      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
-      background: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.07) 2px,rgba(0,0,0,0.07) 4px);
-    }
-    a { color: var(--red); text-decoration: none; }
-    a:hover { color: var(--red-bright); }
-
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 56px;
-      background: rgba(4,2,3,0.92); backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-    .logo { font-family: var(--font-d); font-size: 1.1rem; font-weight: 900; letter-spacing: 0.06em; color: var(--white); line-height: 1; }
-    .logo span { color: var(--red-bright); }
-    .logo-pvt { font-family: var(--font-m); font-size: 0.48rem; letter-spacing: 0.22em; color: var(--red-dim); margin-top: 3px; text-transform: uppercase; display: block; }
-    .nav-links { display: flex; gap: 30px; list-style: none; }
-    .nav-links a { font-family: var(--font-m); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--red-bright); }
-    .nav-cta {
-      font-family: var(--font-d); font-size: 0.63rem; font-weight: 700;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      padding: 10px 22px; border: 1px solid var(--red); color: var(--red);
-      background: transparent; cursor: pointer;
-      clip-path: polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));
-      transition: background 0.2s, color 0.2s; display: inline-block;
-    }
-    .nav-cta:hover { background: var(--red); color: var(--black); }
-
-
-
-    /* HERO */
-    #hero {
-      position: relative; min-height: 100vh;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 100px 40px 80px; overflow: hidden; z-index: 1;
-    }
-    .hglow { position: absolute; border-radius: 50%; pointer-events: none; }
-    .hglow-1 { width: 800px; height: 800px; background: radial-gradient(circle, rgba(220,30,30,0.14) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); animation: gp 5s ease-in-out infinite; }
-    .hglow-2 { width: 350px; height: 350px; background: radial-gradient(circle, rgba(255,106,0,0.09) 0%, transparent 70%); top: 25%; right: 8%; animation: gp 6s ease-in-out infinite reverse; }
-    @keyframes gp { 0%,100%{opacity:1;transform:translate(-50%,-50%) scale(1)} 50%{opacity:0.5;transform:translate(-50%,-50%) scale(1.12)} }
-    .hglow-2 { animation: gp2 6s ease-in-out infinite reverse; }
-    @keyframes gp2 { 0%,100%{opacity:1} 50%{opacity:0.5} }
-
-    .hero-tag { font-family: var(--font-m); font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); margin-bottom: 22px; opacity: 0; animation: fu 0.8s 0.2s forwards; }
-    h1 { font-family: var(--font-d); font-size: clamp(2.8rem,7vw,6rem); font-weight: 900; line-height: 1.0; margin-bottom: 26px; opacity: 0; animation: fu 0.8s 0.4s forwards; }
-    h1 .r { color: var(--red-bright); }
-    h1 .o { color: var(--orange); }
-    .hero-sub { font-size: clamp(1rem,2.5vw,1.25rem); color: var(--muted); max-width: 640px; margin: 0 auto 44px; opacity: 0; animation: fu 0.8s 0.6s forwards; }
-    .hero-btns { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; opacity: 0; animation: fu 0.8s 0.8s forwards; }
-    .hero-metrics { display: flex; gap: 56px; margin-top: 80px; justify-content: center; flex-wrap: wrap; opacity: 0; animation: fu 0.8s 1s forwards; }
-    .metric { text-align: center; border-left: 1px solid var(--border); padding-left: 28px; }
-    .metric:first-child { border-left: none; padding-left: 0; }
-    .metric-num { font-family: var(--font-d); font-size: 2.2rem; font-weight: 900; color: var(--red); display: block; }
-    .metric-label { font-family: var(--font-m); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
-    @keyframes fu { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
-
-    /* BUTTONS */
-    .btn-p {
-      font-family: var(--font-d); font-size: 0.72rem; font-weight: 700;
-      letter-spacing: 0.15em; text-transform: uppercase; padding: 16px 36px;
-      background: var(--red); color: var(--black); border: none; cursor: pointer;
-      clip-path: polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));
-      transition: opacity 0.2s; display: inline-block;
-    }
-    .btn-p:hover { opacity: 0.82; color: var(--black); }
-    .btn-s {
-      font-family: var(--font-d); font-size: 0.72rem; font-weight: 700;
-      letter-spacing: 0.15em; text-transform: uppercase; padding: 16px 36px;
-      background: transparent; color: var(--white);
-      border: 1px solid rgba(245,232,232,0.2); cursor: pointer;
-      clip-path: polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));
-      transition: border-color 0.2s, color 0.2s; display: inline-block;
-    }
-    .btn-s:hover { border-color: var(--red); color: var(--red); }
-
-    /* SECTIONS */
-    section { position: relative; z-index: 1; padding: 100px 60px; }
-    .sec-hd { text-align: center; margin-bottom: 70px; }
-    .sec-tag { font-family: var(--font-m); font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 14px; }
-    h2 { font-family: var(--font-d); font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 900; line-height: 1.1; }
-    h2 em { color: var(--red-bright); font-style: normal; }
-    .sec-line { width: 60px; height: 2px; background: linear-gradient(90deg,var(--red),transparent); margin: 18px auto 0; }
-    .sec-line-l { margin: 18px 0 0; }
-
-    /* SERVICES */
-    #services { background: var(--deep); }
-    .srv-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 2px; max-width: 1100px; margin: 0 auto; }
-    .srv-card { background: var(--card); padding: 42px 34px; position: relative; overflow: hidden; transition: transform 0.3s; border: 1px solid var(--border); }
-    .srv-card:hover { transform: translateY(-5px); }
-    .srv-card::before { content:''; position:absolute; top:0;left:0;right:0; height:2px; background:linear-gradient(90deg,var(--red),var(--orange)); transform:scaleX(0); transform-origin:left; transition:transform 0.4s; }
-    .srv-card:hover::before { transform:scaleX(1); }
-    .srv-num { font-family:var(--font-m); font-size:0.62rem; color:var(--red); letter-spacing:0.2em; margin-bottom:10px; display:block; }
-    .srv-icon { font-size:2.2rem; margin-bottom:18px; display:block; }
-    h3 { font-family:var(--font-d); font-size:0.9rem; font-weight:700; letter-spacing:0.06em; margin-bottom:12px; color:var(--white); }
-    .srv-desc { color:var(--muted); font-size:0.93rem; line-height:1.75; }
-    .tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:22px; }
-    .tag { font-family:var(--font-m); font-size:0.62rem; letter-spacing:0.1em; padding:3px 9px; border:1px solid var(--border); color:var(--red-dim); }
-
-    /* PROJECTS */
-    #projects { background: var(--black); }
-    .proj-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px; max-width:1100px; margin:0 auto; }
-    .proj-card { background:var(--card); border:1px solid var(--border); padding:34px 28px; position:relative; overflow:hidden; transition:border-color 0.3s; }
-    .proj-card:hover { border-color:var(--red); }
-    .proj-status { display:inline-flex; align-items:center; gap:7px; font-family:var(--font-m); font-size:0.58rem; letter-spacing:0.15em; text-transform:uppercase; padding:4px 11px; border:1px solid; margin-bottom:20px; }
-    .s-live { color:#00e676; border-color:rgba(0,230,118,0.3); }
-    .s-live::before { content:''; width:6px;height:6px; border-radius:50%; background:#00e676; animation:blink 1.2s infinite; }
-    .s-dev { color:var(--orange); border-color:rgba(255,106,0,0.3); }
-    .s-dev::before { content:''; width:6px;height:6px; border-radius:50%; background:var(--orange); animation:blink 1.8s infinite; }
-    .s-res { color:#aaa; border-color:rgba(180,180,180,0.25); }
-    .s-res::before { content:''; width:6px;height:6px; border-radius:50%; background:#aaa; }
-    @keyframes blink { 0%,100%{opacity:1}50%{opacity:0.3} }
-    .proj-title { font-family:var(--font-d); font-size:0.95rem; font-weight:700; margin-bottom:12px; color:var(--white); }
-    .proj-desc { color:var(--muted); font-size:0.9rem; line-height:1.7; margin-bottom:18px; }
-    .prog-wrap { margin-top:18px; }
-    .prog-label { font-family:var(--font-m); font-size:0.58rem; letter-spacing:0.12em; color:var(--muted); display:flex; justify-content:space-between; margin-bottom:6px; }
-    .prog-bar { height:3px; background:rgba(220,30,30,0.12); border-radius:2px; }
-    .prog-fill { height:100%; background:linear-gradient(90deg,var(--red),var(--orange)); border-radius:2px; }
-
-    /* ABOUT */
-    #about { background: var(--deep); }
-    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; max-width:1100px; margin:0 auto; }
-    .about-text p { color:var(--muted); font-size:1rem; line-height:1.85; margin-bottom:18px; }
-    .about-det { display:flex; gap:12px; align-items:flex-start; margin-bottom:13px; }
-    .about-det-icon { color:var(--red); font-size:0.72rem; margin-top:5px; flex-shrink:0; }
-    .about-det-text { font-size:0.93rem; color:var(--muted); }
-    .about-det-text strong { color:var(--white); }
-    .about-r { display:flex; flex-direction:column; gap:14px; }
-    .about-sc { border:1px solid var(--border); background:var(--card); padding:24px; position:relative; display:flex; align-items:center; gap:18px; }
-    .about-sc::after { content:''; position:absolute; bottom:0;right:0; width:16px;height:16px; border-bottom:2px solid var(--red); border-right:2px solid var(--red); }
-    .about-sn { font-family:var(--font-d); font-size:1.7rem; font-weight:900; color:var(--red); white-space:nowrap; }
-    .about-sl { font-size:0.88rem; color:var(--muted); line-height:1.4; }
-
-    /* PROCESS */
-    #process { background: var(--black); }
-    .proc-steps { display:flex; max-width:1100px; margin:0 auto; position:relative; }
-    .proc-steps::before { content:''; position:absolute; top:28px; left:0;right:0; height:1px; background:linear-gradient(90deg,transparent,var(--red),transparent); }
-    .step { flex:1; padding:0 18px; text-align:center; }
-    .step-circle { width:56px;height:56px; border:2px solid var(--red); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 22px; background:var(--black); font-family:var(--font-d); font-size:0.78rem; font-weight:700; color:var(--red); position:relative; z-index:1; }
-    .step h3 { font-size:0.82rem; letter-spacing:0.08em; margin-bottom:10px; }
-    .step p { color:var(--muted); font-size:0.84rem; line-height:1.6; }
-
-    /* CONTACT */
-    #contact { background: var(--deep); }
-    .contact-wrap { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1.2fr; gap:60px; align-items:start; }
-    .contact-lft h2 { text-align:left; font-size:clamp(1.4rem,3vw,2.2rem); }
-    .contact-lft p { color:var(--muted); margin-top:20px; font-size:0.97rem; line-height:1.8; }
-    .ci { display:flex; flex-direction:column; margin-top:34px; }
-    .ci-row { display:flex; border:1px solid var(--border); margin-top:-1px; background:var(--card); transition:border-color 0.3s; position:relative; }
-    .ci-row:hover { border-color:var(--red); z-index:1; }
-    .ci-icon { width:54px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:1rem; border-right:1px solid var(--border); background:rgba(220,30,30,0.06); }
-    .ci-detail { padding:18px 22px; }
-    .ci-label { font-family:var(--font-m); font-size:0.58rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--red); margin-bottom:4px; }
-    .ci-val { font-family:var(--font-b); font-size:0.97rem; font-weight:600; color:var(--white); }
-    .ci-val a { color:var(--white); }
-    .ci-val a:hover { color:var(--red-bright); }
-    .cf-box { background:var(--card); border:1px solid var(--border); padding:40px 34px; position:relative; }
-    .cf-box::before { content:''; position:absolute; top:0;left:0;right:0; height:2px; background:linear-gradient(90deg,var(--red),var(--orange)); }
-    .cf-box h3 { font-family:var(--font-d); font-size:0.88rem; font-weight:700; letter-spacing:0.08em; margin-bottom:28px; }
-    .f-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-    .fg { margin-bottom:16px; }
-    .fg label { display:block; font-family:var(--font-m); font-size:0.6rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--red); margin-bottom:6px; }
-    .fg input, .fg select, .fg textarea { width:100%; background:rgba(220,30,30,0.04); border:1px solid var(--border); color:var(--white); font-family:var(--font-b); font-size:0.93rem; padding:11px 14px; outline:none; transition:border-color 0.2s; }
-    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--red); }
-    .fg select option { background:var(--card); }
-    .fg textarea { resize:vertical; min-height:100px; }
-
-    /* FOOTER */
-    footer { position:relative; z-index:1; background:var(--black); border-top:1px solid var(--border); padding:50px 60px 28px; }
-    .ft-top { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:40px; margin-bottom:38px; }
-    .ft-logo { font-family:var(--font-d); font-size:1.05rem; font-weight:900; letter-spacing:0.06em; }
-    .ft-logo span { color:var(--red-bright); }
-    .ft-pvt { font-family:var(--font-m); font-size:0.47rem; letter-spacing:0.2em; color:var(--red-dim); margin-top:3px; text-transform:uppercase; }
-    .ft-tagline { color:var(--muted); font-size:0.86rem; margin-top:10px; line-height:1.7; }
-    .ft-col h4 { font-family:var(--font-m); font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--red); margin-bottom:14px; }
-    .ft-col ul { list-style:none; display:flex; flex-direction:column; gap:9px; }
-    .ft-col ul li a { color:var(--muted); font-size:0.86rem; transition:color 0.2s; }
-    .ft-col ul li a:hover { color:var(--red-bright); }
-    .ft-bot { border-top:1px solid var(--border); padding-top:22px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
-    .ft-copy { font-family:var(--font-m); font-size:0.6rem; letter-spacing:0.1em; color:var(--muted); }
-    .ft-badge { font-family:var(--font-m); font-size:0.56rem; letter-spacing:0.1em; color:var(--red-dim); border:1px solid var(--border); padding:4px 10px; }
-
-    /* REVEAL */
-    .reveal { opacity:0; transform:translateY(28px); transition:opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity:1; transform:none; }
-
-    @media (max-width:900px) {
-      nav { padding:14px 18px; }
-      .nav-links { display:none; }
-      section { padding:70px 20px; }
-      .about-grid, .contact-wrap, .ft-top { grid-template-columns:1fr; gap:32px; }
-      .f-row { grid-template-columns:1fr; }
-      .proc-steps { flex-direction:column; gap:30px; }
-      .proc-steps::before { display:none; }
-      footer { padding:36px 20px 18px; }
-      .hero-metrics { gap:24px; }
-      .metric { border-left:none; padding-left:0; }
-      .ft-bot { flex-direction:column; text-align:center; }
-    }
-  </style>
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.services-grid,.why-grid{grid-template-columns:1fr}.hero-stats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){.hero-stats{grid-template-columns:1fr;gap:1rem}}
+</style>
 </head>
 <body>
+<div id="loader">
+  <div class="ld-logo">BLACK<b>FORGE</b>X</div>
+  <div class="ld-bar-wrap"><div class="ld-bar"></div></div>
+  <div class="ld-txt">Initialising Systems…</div>
+</div>
 
-<!-- NAV -->
-<nav>
-  <div class="logo">BLACK<span>FORGE</span>X<span class="logo-pvt">Private Limited</span></div>
+<canvas id="particles-canvas"></canvas>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">BLACK<span class="x">FORGE</span>X<span class="nav-badge">Pvt Ltd</span></a>
   <ul class="nav-links">
-    <li><a href="#hero" class="nav-a active">Home</a></li>
-    <li><a href="#services" class="nav-a">Services</a></li>
-    <li><a href="#projects" class="nav-a">Projects</a></li>
-    <li><a href="#about" class="nav-a">About</a></li>
-    <li><a href="#contact" class="nav-a">Contact</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Get a Quote</a>
+  <div class="nav-actions">
+    <button class="theme-btn" onclick="toggleTheme()"><span class="theme-icon">☀️</span></button>
+    <a href="contact.html" class="nav-cta">Get Quote</a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
 </nav>
-
-
+<div class="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" style="color:var(--accent2)">→ Get Free Quote</a>
+</div>
 
 <!-- HERO -->
-<section id="hero" style="padding-top:0;">
-  <div style="position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 40px 80px;overflow:hidden;">
-    <div class="hglow hglow-1"></div>
-    <div class="hglow hglow-2"></div>
-    <p class="hero-tag">// Akola, Maharashtra — Est. February 2026</p>
-    <h1>WE <span class="r">FORGE</span><br/>THE <span class="o">FUTURE</span><br/>OF TECH</h1>
-    <p class="hero-sub">BlackForgeX Private Limited builds cutting-edge custom software, IoT systems, and IT solutions for businesses that demand excellence.</p>
-    <div class="hero-btns">
-      <a href="#services" class="btn-p">Explore Services</a>
-      <a href="#contact" class="btn-s">Start a Project</a>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span class="hero-eyebrow-dot"></span>
+        Akola, Maharashtra &nbsp;·&nbsp; Est. 2026
+      </div>
+      <h1 class="reveal d1">
+        We <span class="forge">Forge</span><br>
+        Digital <span class="accent">Excellence</span>
+      </h1>
+      <p class="hero-sub reveal d2">
+        Akola's most trusted software development company. We build custom software, 
+        web apps, mobile solutions & IoT systems that accelerate business growth across Maharashtra and India.
+      </p>
+      <div class="hero-btns reveal d3">
+        <a href="services.html" class="btn btn-p">Explore Services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="contact.html" class="btn btn-o">Start Your Project</a>
+      </div>
+      <div class="hero-stats reveal d4">
+        <div><div class="stat-num"><span data-count="50" data-suffix="+">0+</span></div><div class="stat-lbl">Projects Delivered</div></div>
+        <div><div class="stat-num"><span data-count="98" data-suffix="%">0%</span></div><div class="stat-lbl">Client Satisfaction</div></div>
+        <div><div class="stat-num"><span data-count="24" data-suffix="/7">0</span></div><div class="stat-lbl">Support</div></div>
+      </div>
     </div>
-    <div class="hero-metrics">
-      <div class="metric"><span class="metric-num">6+</span><span class="metric-label">Services</span></div>
-      <div class="metric"><span class="metric-num">4</span><span class="metric-label">Projects Active</span></div>
-      <div class="metric"><span class="metric-num">100%</span><span class="metric-label">Client Focus</span></div>
+    <div class="hero-visual reveal-r d2">
+      <div class="hero-orb">
+        <div class="orb-center">
+          <div class="gt" style="font-family:var(--font-h);font-size:2.2rem;font-weight:800">BFX</div>
+          <span>BlackForgeX</span>
+        </div>
+      </div>
+      <div class="hero-card-float c1">
+        <div class="float-icon">⚙️</div>
+        <div class="float-text"><strong>Custom ERP Built</strong><span>Delivered in 6 weeks</span></div>
+      </div>
+      <div class="hero-card-float c2">
+        <div class="float-icon">📱</div>
+        <div class="float-text"><strong>Flutter App Live</strong><span>4.8★ Play Store</span></div>
+      </div>
+      <div class="hero-card-float c3">
+        <div class="float-icon">🤖</div>
+        <div class="float-text"><strong>AI Integration</strong><span>30% ops savings</span></div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">Custom Software</span>
+    <span class="marquee-item">Web Development</span>
+    <span class="marquee-item">Mobile Apps</span>
+    <span class="marquee-item">IoT Solutions</span>
+    <span class="marquee-item">AI Integration</span>
+    <span class="marquee-item">Cloud & DevOps</span>
+    <span class="marquee-item">IT Consulting</span>
+    <span class="marquee-item">ERP Systems</span>
+    <span class="marquee-item">React & Next.js</span>
+    <span class="marquee-item">Flutter</span>
+    <span class="marquee-item">Node.js</span>
+    <span class="marquee-item">Python / Django</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">Custom Software</span>
+    <span class="marquee-item">Web Development</span>
+    <span class="marquee-item">Mobile Apps</span>
+    <span class="marquee-item">IoT Solutions</span>
+    <span class="marquee-item">AI Integration</span>
+    <span class="marquee-item">Cloud & DevOps</span>
+    <span class="marquee-item">IT Consulting</span>
+    <span class="marquee-item">ERP Systems</span>
+    <span class="marquee-item">React & Next.js</span>
+    <span class="marquee-item">Flutter</span>
+    <span class="marquee-item">Node.js</span>
+    <span class="marquee-item">Python / Django</span>
+  </div>
+</div>
 
 <!-- SERVICES -->
-<section id="services">
-  <div class="sec-hd reveal">
-    <span class="sec-tag">// What We Build</span>
-    <h2>Our <em>Core</em> Services</h2>
-    <div class="sec-line"></div>
+<section class="section">
+  <div class="sec-hd centered reveal">
+    <div class="eyebrow">What We Build</div>
+    <h2 class="sec-title">Software Services in Akola</h2>
+    <p class="sec-sub">End-to-end technology solutions for startups to enterprises across Maharashtra and India.</p>
   </div>
-  <div class="srv-grid">
-    <div class="srv-card reveal">
-      <span class="srv-num">01 //</span>
-      <span class="srv-icon">⚙️</span>
-      <h3>Custom Software Development</h3>
-      <p class="srv-desc">Full-cycle software engineering from discovery to deployment. Web apps, mobile apps, APIs, ERP systems, dashboards, and automation tools — built to scale with your business.</p>
-      <div class="tags"><span class="tag">Web Apps</span><span class="tag">Mobile</span><span class="tag">APIs</span><span class="tag">ERP</span><span class="tag">Automation</span></div>
+  <div class="services-grid">
+    <div class="srv-card reveal d1">
+      <div class="srv-icon">⚙️</div>
+      <h3>Custom Software</h3>
+      <p>Scalable ERP, CRM & automation tools built precisely for your business workflows.</p>
+      <div class="srv-tags"><span class="tag">ERP</span><span class="tag">CRM</span><span class="tag">Automation</span></div>
     </div>
-    <div class="srv-card reveal">
-      <span class="srv-num">02 //</span>
-      <span class="srv-icon">📡</span>
-      <h3>IoT &amp; Hardware Solutions</h3>
-      <p class="srv-desc">Smart connected systems bridging physical and digital. Sensor networks, embedded firmware, hardware prototypes, and real-time monitoring for industrial and consumer use.</p>
-      <div class="tags"><span class="tag">IoT</span><span class="tag">Sensors</span><span class="tag">Embedded</span><span class="tag">Firmware</span><span class="tag">Prototypes</span></div>
+    <div class="srv-card reveal d2">
+      <div class="srv-icon">🌐</div>
+      <h3>Web Development</h3>
+      <p>High-performance websites & web apps using React, Next.js and modern stacks.</p>
+      <div class="srv-tags"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span></div>
     </div>
-    <div class="srv-card reveal">
-      <span class="srv-num">03 //</span>
-      <span class="srv-icon">🛡️</span>
-      <h3>IT Consulting &amp; Support</h3>
-      <p class="srv-desc">Strategic tech consulting, infrastructure design, cloud migration, cybersecurity, and ongoing managed IT support. Your long-term technology partner, not just a vendor.</p>
-      <div class="tags"><span class="tag">IT Audit</span><span class="tag">Cloud</span><span class="tag">Security</span><span class="tag">Managed IT</span><span class="tag">Networking</span></div>
+    <div class="srv-card reveal d3">
+      <div class="srv-icon">📱</div>
+      <h3>Mobile Apps</h3>
+      <p>Native-quality iOS & Android apps built with Flutter and React Native.</p>
+      <div class="srv-tags"><span class="tag">Flutter</span><span class="tag">React Native</span><span class="tag">iOS/Android</span></div>
     </div>
-    <div class="srv-card reveal">
-      <span class="srv-num">04 //</span>
-      <span class="srv-icon">🌐</span>
-      <h3>Web &amp; Mobile Development</h3>
-      <p class="srv-desc">High-performance websites and mobile apps with modern tech stacks. Responsive, SEO-optimized, fast-loading, and built to convert visitors into customers.</p>
-      <div class="tags"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Flutter</span><span class="tag">SEO</span><span class="tag">E-Commerce</span></div>
+    <div class="srv-card reveal d1">
+      <div class="srv-icon">📡</div>
+      <h3>IoT Solutions</h3>
+      <p>Smart connected systems for agriculture, manufacturing & smart homes.</p>
+      <div class="srv-tags"><span class="tag">IoT</span><span class="tag">Embedded</span><span class="tag">Sensors</span></div>
     </div>
-    <div class="srv-card reveal">
-      <span class="srv-num">05 //</span>
-      <span class="srv-icon">☁️</span>
-      <h3>Cloud &amp; Infrastructure</h3>
-      <p class="srv-desc">Cloud architecture and optimization on AWS, Azure, and GCP. DevOps pipelines, containerization, monitoring, and cost optimization for lean, reliable deployments.</p>
-      <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">DevOps</span></div>
+    <div class="srv-card reveal d2">
+      <div class="srv-icon">☁️</div>
+      <h3>Cloud & DevOps</h3>
+      <p>AWS, Azure & GCP architecture. CI/CD pipelines & infrastructure management.</p>
+      <div class="srv-tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Docker</span></div>
     </div>
-    <div class="srv-card reveal">
-      <span class="srv-num">06 //</span>
-      <span class="srv-icon">🤖</span>
-      <h3>AI &amp; Automation Integration</h3>
-      <p class="srv-desc">Integrate AI into your workflows — chatbots, document processing, predictive analytics, ML pipelines, and intelligent automation that saves time and money.</p>
-      <div class="tags"><span class="tag">AI Integration</span><span class="tag">Chatbots</span><span class="tag">ML</span><span class="tag">Data Pipelines</span></div>
+    <div class="srv-card reveal d3">
+      <div class="srv-icon">🤖</div>
+      <h3>AI & Automation</h3>
+      <p>ML integrations, intelligent chatbots, predictive analytics & process automation.</p>
+      <div class="srv-tags"><span class="tag">ML</span><span class="tag">LLM</span><span class="tag">Chatbots</span></div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS IN PROGRESS -->
-<section id="projects">
-  <div class="sec-hd reveal">
-    <span class="sec-tag">// Active Development</span>
-    <h2>Projects <em>In Progress</em></h2>
-    <div class="sec-line"></div>
-    <p style="color:var(--muted);margin-top:16px;font-size:0.93rem;">We're actively forging solutions. Here's what's currently in our workshop.</p>
+<!-- WHY US -->
+<section class="section section-alt">
+  <div class="sec-hd centered reveal">
+    <div class="eyebrow">Why BlackForgeX</div>
+    <h2 class="sec-title">The Akola Advantage</h2>
+    <p class="sec-sub">Vidarbha's preferred technology partner — local roots, global standards.</p>
   </div>
-  <div class="proj-grid">
-    <div class="proj-card reveal">
-      <div class="proj-status s-live">● Alpha Live</div>
-      <div class="proj-title">SmartBuild ERP Platform</div>
-      <p class="proj-desc">A full-stack ERP for construction and real-estate businesses across Vidarbha — managing projects, workers, materials, billing, and analytics from a single dashboard.</p>
-      <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span></div>
-      <div class="prog-wrap">
-        <div class="prog-label"><span>Development Progress</span><span>72%</span></div>
-        <div class="prog-bar"><div class="prog-fill" style="width:72%"></div></div>
-      </div>
+  <div class="why-grid">
+    <div class="why-item reveal d1">
+      <div class="why-icon">🎯</div>
+      <div><h3>Local Expertise, Global Code</h3><p>Deep understanding of Vidarbha's business landscape. International quality delivered locally.</p></div>
     </div>
-    <div class="proj-card reveal">
-      <div class="proj-status s-dev">◉ In Development</div>
-      <div class="proj-title">AgriSense IoT System</div>
-      <p class="proj-desc">IoT-powered agricultural monitoring for Vidarbha farmers. Real-time soil, temperature, and humidity sensors with mobile alerts and automated irrigation triggers.</p>
-      <div class="tags"><span class="tag">IoT</span><span class="tag">Arduino</span><span class="tag">MQTT</span><span class="tag">Mobile</span></div>
-      <div class="prog-wrap">
-        <div class="prog-label"><span>Development Progress</span><span>45%</span></div>
-        <div class="prog-bar"><div class="prog-fill" style="width:45%"></div></div>
-      </div>
+    <div class="why-item reveal d2">
+      <div class="why-icon">⚡</div>
+      <div><h3>Fast Delivery</h3><p>Agile sprints, quick iterations, faster time-to-market for your digital product.</p></div>
     </div>
-    <div class="proj-card reveal">
-      <div class="proj-status s-dev">◉ In Development</div>
-      <div class="proj-title">LocalBiz Management Suite</div>
-      <p class="proj-desc">POS, inventory, CRM, and GST billing software for small and medium businesses across Maharashtra. Offline-first with cloud sync and multi-device support.</p>
-      <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">GST API</span></div>
-      <div class="prog-wrap">
-        <div class="prog-label"><span>Development Progress</span><span>38%</span></div>
-        <div class="prog-bar"><div class="prog-fill" style="width:38%"></div></div>
-      </div>
+    <div class="why-item reveal d3">
+      <div class="why-icon">🛡️</div>
+      <div><h3>Enterprise Security</h3><p>Bank-grade security practices and compliance with Indian data protection regulations.</p></div>
     </div>
-    <div class="proj-card reveal">
-      <div class="proj-status s-res">◌ Research Phase</div>
-      <div class="proj-title">SecureNet IT Monitor</div>
-      <p class="proj-desc">Lightweight network monitoring and threat detection for SMBs. Automated alerts, device tracking, bandwidth monitoring, and one-click incident reporting dashboard.</p>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Cybersecurity</span><span class="tag">Dashboard</span></div>
-      <div class="prog-wrap">
-        <div class="prog-label"><span>Development Progress</span><span>20%</span></div>
-        <div class="prog-bar"><div class="prog-fill" style="width:20%"></div></div>
-      </div>
+    <div class="why-item reveal d4">
+      <div class="why-icon">💰</div>
+      <div><h3>Cost-Effective</h3><p>Pune/Mumbai quality at Akola prices. No compromise on code or customer support.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="sec-hd reveal">
-    <span class="sec-tag">// Who We Are</span>
-    <h2>About <em>BlackForgeX</em></h2>
-    <div class="sec-line"></div>
-  </div>
-  <div class="about-grid">
-    <div class="about-text reveal">
-      <p>BlackForgeX Private Limited is a technology company born in Akola, Maharashtra — the heart of Vidarbha. Founded in February 2026, our mission is to bring enterprise-grade technology to every business, regardless of size or location.</p>
-      <p>We combine deep expertise in software engineering, hardware systems, and strategic IT consulting to deliver solutions that work in the real world — not just on paper. Every project is a commitment to quality, transparency, and long-term partnership.</p>
-      <p>Whether you're a startup needing your first product built, or an established business looking to modernize your tech stack, BlackForgeX has the skill and passion to get it done right.</p>
-      <div style="margin-top:28px;">
-        <div class="about-det"><span class="about-det-icon">▶</span><span class="about-det-text"><strong>Founded:</strong> February 2026, Akola, Maharashtra</span></div>
-        <div class="about-det"><span class="about-det-icon">▶</span><span class="about-det-text"><strong>Registered:</strong> BlackForgeX Private Limited</span></div>
-        <div class="about-det"><span class="about-det-icon">▶</span><span class="about-det-text"><strong>Address:</strong> Balaji Heights, Near Hedgewar Blood Bank, Jatharpeth, Akola, Maharashtra</span></div>
-        <div class="about-det"><span class="about-det-icon">▶</span><span class="about-det-text"><strong>Domains:</strong> Software, IoT &amp; Hardware, IT Consulting, AI &amp; Automation</span></div>
-        <div class="about-det"><span class="about-det-icon">▶</span><span class="about-det-text"><strong>Service Area:</strong> Pan-India with global delivery capability</span></div>
-      </div>
-    </div>
-    <div class="about-r reveal">
-      <div class="about-sc"><div class="about-sn">2026</div><div class="about-sl">Established February 2026 in Akola, the technology hub of Vidarbha</div></div>
-      <div class="about-sc"><div class="about-sn">6+</div><div class="about-sl">Core service offerings spanning software, hardware, cloud &amp; AI</div></div>
-      <div class="about-sc"><div class="about-sn">4</div><div class="about-sl">Active projects currently in development for real-world clients</div></div>
-      <div class="about-sc"><div class="about-sn">∞</div><div class="about-sl">Commitment to growth, quality, and client success — always</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" style="background:var(--black);">
-  <div class="sec-hd reveal">
-    <span class="sec-tag">// How We Work</span>
-    <h2>Our <em>Process</em></h2>
-    <div class="sec-line"></div>
-  </div>
-  <div class="proc-steps reveal">
-    <div class="step"><div class="step-circle">01</div><h3>Discovery</h3><p>Deep dive into your goals, constraints, and technology through structured consultation.</p></div>
-    <div class="step"><div class="step-circle">02</div><h3>Design</h3><p>Architecture, prototypes, and tech stack selection tailored to your needs and budget.</p></div>
-    <div class="step"><div class="step-circle">03</div><h3>Build</h3><p>Iterative development with regular updates and your feedback at every stage.</p></div>
-    <div class="step"><div class="step-circle">04</div><h3>Deploy</h3><p>Rigorous testing, smooth launch, and complete documentation handover.</p></div>
-    <div class="step"><div class="step-circle">05</div><h3>Support</h3><p>Ongoing maintenance and consulting as your business grows and evolves.</p></div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="sec-hd reveal">
-    <span class="sec-tag">// Let's Build Together</span>
-    <h2>Get in <em>Touch</em></h2>
-    <div class="sec-line"></div>
-  </div>
-  <div class="contact-wrap">
-    <div class="reveal">
-      <h2 style="text-align:left;font-size:clamp(1.3rem,3vw,2rem);">Ready to <em>Start</em><br/>Your Project?</h2>
-      <div class="sec-line sec-line-l"></div>
-      <p>Whether you have a full brief or just a rough idea — reach out. We'll help you shape it into a real solution. No pressure, no jargon, just straight talk about what's possible.</p>
-      <div class="ci">
-        <div class="ci-row">
-          <div class="ci-icon">📞</div>
-          <div class="ci-detail"><div class="ci-label">Phone</div><div class="ci-val"><a href="tel:+918308966290">+91 83089 66290</a></div></div>
-        </div>
-        <div class="ci-row">
-          <div class="ci-icon">✉️</div>
-          <div class="ci-detail"><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:atharva.sunil.zade@gmail.com">atharva.sunil.zade@gmail.com</a></div></div>
-        </div>
-        <div class="ci-row">
-          <div class="ci-icon">📍</div>
-          <div class="ci-detail"><div class="ci-label">Address</div><div class="ci-val">Balaji Heights, Near Hedgewar Blood Bank,<br/>Jatharpeth, Akola, Maharashtra</div></div>
-        </div>
-        <div class="ci-row">
-          <div class="ci-icon">🕐</div>
-          <div class="ci-detail"><div class="ci-label">Working Hours</div><div class="ci-val">Mon – Sat &nbsp;|&nbsp; 9:00 AM – 7:00 PM</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="cf-box reveal">
-      <h3>// Send Us a Message</h3>
-      <div class="f-row">
-        <div class="fg"><label>Your Name</label><input type="text" placeholder="Full Name" /></div>
-        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210" /></div>
-      </div>
-      <div class="fg"><label>Email Address</label><input type="email" placeholder="you@company.com" /></div>
-      <div class="fg">
-        <label>Service Required</label>
-        <select>
-          <option value="">Select a service…</option>
-          <option>Custom Software Development</option>
-          <option>Web &amp; Mobile App Development</option>
-          <option>IoT &amp; Hardware Solutions</option>
-          <option>IT Consulting &amp; Support</option>
-          <option>Cloud &amp; Infrastructure</option>
-          <option>AI &amp; Automation Integration</option>
-          <option>Other / Not Sure Yet</option>
-        </select>
-      </div>
-      <div class="fg"><label>Tell Us About Your Project</label><textarea placeholder="Describe your project, goals, timeline, and any specific requirements…"></textarea></div>
-      <a href="mailto:atharva.sunil.zade@gmail.com" class="btn-p" style="display:block;text-align:center;padding:15px;width:100%;">Send Message →</a>
+<!-- CTA -->
+<section class="section">
+  <div class="cta-box reveal">
+    <div class="eyebrow" style="justify-content:center;margin-bottom:1rem"><span style="width:0"></span>Start Today</div>
+    <h2 class="gt">Ready to Build Something Amazing?</h2>
+    <p>Join 50+ businesses across Maharashtra who trust BlackForgeX. Free consultation for new projects.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-p">Get Free Consultation →</a>
+      <a href="projects.html" class="btn btn-o">View Our Work</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="ft-top">
+  <div class="ft-grid">
     <div>
-      <div class="ft-logo">BLACK<span>FORGE</span>X<div class="ft-pvt">Private Limited</div></div>
-      <p class="ft-tagline">Building tomorrow's technology today. Rooted in Akola. Serving India and beyond.</p>
+      <a href="index.html" class="nav-logo" style="font-size:1.3rem">BLACK<span class="x">FORGE</span>X</a>
+      <p class="ft-desc">Akola's premier software development company. Building digital solutions that drive business growth across Maharashtra and India.</p>
+      <div class="ft-socials">
+        <a href="#" class="ft-social" title="LinkedIn">in</a>
+        <a href="#" class="ft-social" title="Twitter">𝕏</a>
+        <a href="#" class="ft-social" title="Instagram">ig</a>
+        <a href="https://wa.me/918308966290" class="ft-social" title="WhatsApp">wa</a>
+      </div>
     </div>
-    <div class="ft-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#services">Custom Software</a></li>
-        <li><a href="#services">IoT &amp; Hardware</a></li>
-        <li><a href="#services">IT Consulting</a></li>
-        <li><a href="#services">Web &amp; Mobile</a></li>
-        <li><a href="#services">AI Integration</a></li>
-      </ul>
-    </div>
-    <div class="ft-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#process">Our Process</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="ft-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:+918308966290">+91 83089 66290</a></li>
-        <li><a href="mailto:atharva.sunil.zade@gmail.com">atharva.sunil.zade@gmail.com</a></li>
-        <li><a href="#contact">Balaji Heights, Near Hedgewar<br/>Blood Bank, Jatharpeth, Akola</a></li>
-      </ul>
-    </div>
+    <div class="ft-col"><h4>Services</h4><ul>
+      <li><a href="services.html">Custom Software</a></li>
+      <li><a href="services.html">Web Development</a></li>
+      <li><a href="services.html">Mobile Apps</a></li>
+      <li><a href="services.html">IoT Solutions</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Company</h4><ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html#careers">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="ft-col"><h4>Contact</h4><ul>
+      <li><a href="tel:+918308966290">+91 83089 66290</a></li>
+      <li><a href="mailto:atharva.sunil.zade@gmail.com">atharva.sunil.zade@gmail.com</a></li>
+      <li><a href="https://wa.me/918308966290">WhatsApp Us</a></li>
+      <li>Akola, Maharashtra 444005</li>
+    </ul></div>
   </div>
-  <div class="ft-bot">
-    <div class="ft-copy">© 2026 BlackForgeX Private Limited. All rights reserved. &nbsp;·&nbsp; blackforgex.group &nbsp;·&nbsp; Akola, Maharashtra, India</div>
-    <div class="ft-badge">EST. FEB 2026</div>
+  <div class="ft-bottom">
+    <p>© 2026 BlackForgeX Private Limited. All rights reserved.</p>
+    <p>Software Development Company · Akola, Maharashtra, India</p>
   </div>
 </footer>
 
-<script>
-  // Scroll reveal
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+<a href="https://wa.me/918308966290?text=Hi%20BlackForgeX!%20I%20want%20to%20discuss%20a%20project." class="wa-btn" target="_blank" rel="noopener" title="Chat on WhatsApp">💬</a>
 
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const t = document.querySelector(a.getAttribute('href'));
-      if(t) t.scrollIntoView({ behavior:'smooth' });
-    });
-  });
-
-  // Active nav highlight
-  const secs = document.querySelectorAll('section[id]');
-  const nlinks = document.querySelectorAll('.nav-a');
-  window.addEventListener('scroll', () => {
-    let cur = '';
-    secs.forEach(s => { if(window.scrollY >= s.offsetTop - 130) cur = s.id; });
-    nlinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#'+cur); });
-  });
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>

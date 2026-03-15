@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Services | BlackForgeX — Software Development Akola, Maharashtra</title>
+<meta name="description" content="BlackForgeX offers custom software, web development, mobile apps, IoT, cloud & AI services in Akola, Maharashtra. Get a free quote today."/>
+<link rel="canonical" href="https://blackforgex.group/services.html"/>
+<link rel="stylesheet" href="css/styles.css"/>
+<style>
+.page-hero{padding:calc(var(--nav-h)+5rem) 5% 5rem;text-align:center;position:relative;z-index:1;background:linear-gradient(180deg,rgba(59,130,246,.04) 0%,transparent 100%)}
+.page-hero h1{font-family:var(--font-h);font-size:clamp(2.5rem,5vw,3.8rem);font-weight:800;letter-spacing:-.03em;margin-bottom:1rem}
+.page-hero p{color:var(--text2);font-size:1.1rem;max-width:580px;margin:0 auto}
+
+.srv-full-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:1280px;margin:0 auto}
+.srv-full-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius2);padding:2.5rem;position:relative;overflow:hidden;transition:all .35s}
+.srv-full-card:hover{border-color:var(--border2);transform:translateY(-5px);box-shadow:0 20px 48px -12px rgba(0,0,0,.5)}
+.srv-full-card::after{content:'';position:absolute;top:0;left:0;width:4px;height:0;background:linear-gradient(180deg,var(--accent),var(--forge));border-radius:0 0 4px 4px;transition:height .4s}
+.srv-full-card:hover::after{height:100%}
+.srv-num{font-family:var(--font-m);font-size:.68rem;color:var(--text3);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.25rem;display:block}
+.srv-full-card .icon{font-size:2.5rem;margin-bottom:1.25rem;display:block}
+.srv-full-card h2{font-family:var(--font-h);font-size:1.4rem;font-weight:700;margin-bottom:.75rem}
+.srv-full-card p{color:var(--text2);font-size:.92rem;line-height:1.7;margin-bottom:1.5rem}
+.srv-list{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem}
+.srv-list li{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--text2)}
+.srv-list li::before{content:'✓';color:var(--success);font-weight:700;flex-shrink:0}
+.srv-full-card .tags{display:flex;flex-wrap:wrap;gap:.4rem}
+
+.process{max-width:900px;margin:0 auto}
+.process-step{display:flex;gap:2rem;align-items:flex-start;position:relative;padding-bottom:2.5rem}
+.process-step:not(:last-child)::after{content:'';position:absolute;left:24px;top:50px;bottom:0;width:1px;background:linear-gradient(180deg,var(--border2),transparent)}
+.step-num{width:48px;height:48px;border-radius:12px;background:var(--card);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:var(--font-m);font-size:.85rem;font-weight:500;color:var(--accent2);flex-shrink:0}
+.step-body h3{font-family:var(--font-h);font-size:1.1rem;font-weight:700;margin-bottom:.4rem}
+.step-body p{color:var(--text2);font-size:.9rem;line-height:1.65}
+
+.tech-grid{display:flex;flex-wrap:wrap;gap:.75rem;max-width:1280px;margin:0 auto}
+.tech-chip{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.5rem 1.1rem;display:flex;align-items:center;gap:.5rem;font-family:var(--font-m);font-size:.75rem;color:var(--text2);transition:all .3s}
+.tech-chip:hover{border-color:var(--accent);color:var(--accent2);transform:translateY(-2px)}
+.tech-chip span{font-size:1rem}
+
+@media(max-width:768px){.srv-full-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="loader"><div class="ld-logo">BLACK<b>FORGE</b>X</div><div class="ld-bar-wrap"><div class="ld-bar"></div></div><div class="ld-txt">Loading Services…</div></div>
+<canvas id="particles-canvas"></canvas>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">BLACK<span class="x">FORGE</span>X<span class="nav-badge">Pvt Ltd</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="services.html" class="active">Services</a></li>
+    <li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-btn" onclick="toggleTheme()"><span class="theme-icon">☀️</span></button>
+    <a href="contact.html" class="nav-cta">Get Quote</a>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="eyebrow reveal" style="justify-content:center;margin-bottom:1rem"><span style="display:none"></span>What We Do</div>
+  <h1 class="reveal d1"><span class="gt">Services That</span><br>Drive Real Growth</h1>
+  <p class="reveal d2">Full-stack technology partner for businesses in Akola, Vidarbha and across India — from idea to deployment.</p>
+</div>
+
+<section class="section">
+  <div class="srv-full-grid">
+    <div class="srv-full-card reveal d1">
+      <span class="srv-num">01 / Custom Software</span>
+      <span class="icon">⚙️</span>
+      <h2>Custom Software Development</h2>
+      <p>We don't sell templates. Every line of code is crafted for your specific business needs — scalable, maintainable, and built to last.</p>
+      <ul class="srv-list"><li>ERP & MRP Systems</li><li>CRM & Sales Automation</li><li>Inventory Management</li><li>Business Process Automation</li><li>Legacy System Modernisation</li></ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">.NET</span></div>
+    </div>
+    <div class="srv-full-card reveal d2">
+      <span class="srv-num">02 / Web Development</span>
+      <span class="icon">🌐</span>
+      <h2>Web Application Development</h2>
+      <p>Fast, secure, SEO-optimised web experiences that convert visitors into customers. From marketing sites to complex SaaS platforms.</p>
+      <ul class="srv-list"><li>React / Next.js Web Apps</li><li>E-commerce (Shopify, Custom)</li><li>Progressive Web Apps (PWA)</li><li>Admin Dashboards & Portals</li><li>API Development & Integration</li></ul>
+      <div class="tags"><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Node.js</span></div>
+    </div>
+    <div class="srv-full-card reveal d1">
+      <span class="srv-num">03 / Mobile Apps</span>
+      <span class="icon">📱</span>
+      <h2>Mobile App Development</h2>
+      <p>Beautiful, performant apps for iOS and Android. Cross-platform efficiency without sacrificing native feel.</p>
+      <ul class="srv-list"><li>Flutter (iOS + Android)</li><li>React Native</li><li>App Store & Play Store Publishing</li><li>Push Notifications & Offline Mode</li><li>Payment Gateway Integration</li></ul>
+      <div class="tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">React Native</span><span class="tag">Firebase</span></div>
+    </div>
+    <div class="srv-full-card reveal d2">
+      <span class="srv-num">04 / IoT & Hardware</span>
+      <span class="icon">📡</span>
+      <h2>IoT & Embedded Systems</h2>
+      <p>Connect the physical and digital worlds. Smart sensors, edge computing, and cloud-connected hardware solutions.</p>
+      <ul class="srv-list"><li>Smart Agriculture Monitoring</li><li>Industrial Automation</li><li>Smart Home / Office Systems</li><li>Real-Time Sensor Dashboards</li><li>Raspberry Pi & Arduino Projects</li></ul>
+      <div class="tags"><span class="tag">Arduino</span><span class="tag">Raspberry Pi</span><span class="tag">MQTT</span><span class="tag">AWS IoT</span></div>
+    </div>
+    <div class="srv-full-card reveal d1">
+      <span class="srv-num">05 / Cloud & DevOps</span>
+      <span class="icon">☁️</span>
+      <h2>Cloud Infrastructure & DevOps</h2>
+      <p>Scalable cloud architectures that grow with your business. Zero-downtime deployments and rock-solid reliability.</p>
+      <ul class="srv-list"><li>AWS / Azure / GCP Setup</li><li>Docker & Kubernetes</li><li>CI/CD Pipeline Automation</li><li>Database Architecture</li><li>Security Audits & Hardening</li></ul>
+      <div class="tags"><span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">Terraform</span><span class="tag">Linux</span></div>
+    </div>
+    <div class="srv-full-card reveal d2">
+      <span class="srv-num">06 / AI & Automation</span>
+      <span class="icon">🤖</span>
+      <h2>AI Integration & Automation</h2>
+      <p>Leverage AI to eliminate repetitive tasks, generate insights and build smarter products — without the buzzword hype.</p>
+      <ul class="srv-list"><li>LLM / ChatGPT Integration</li><li>Predictive Analytics</li><li>Computer Vision</li><li>Intelligent Chatbots</li><li>Workflow Automation (n8n, Zapier)</li></ul>
+      <div class="tags"><span class="tag">Python</span><span class="tag">OpenAI API</span><span class="tag">TensorFlow</span><span class="tag">n8n</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section-alt">
+  <div class="sec-hd reveal">
+    <div class="eyebrow">How We Work</div>
+    <h2 class="sec-title">Our Process</h2>
+    <p class="sec-sub">A structured approach that keeps you in control at every stage.</p>
+  </div>
+  <div class="process">
+    <div class="process-step reveal d1"><div class="step-num">01</div><div class="step-body"><h3>Discovery & Scoping</h3><p>We understand your goals, challenges, and constraints through a free 60-minute consultation. Then we define scope, timeline and cost.</p></div></div>
+    <div class="process-step reveal d2"><div class="step-num">02</div><div class="step-body"><h3>Design & Architecture</h3><p>UI/UX wireframes and technical architecture reviewed and approved by you before a single line of code is written.</p></div></div>
+    <div class="process-step reveal d3"><div class="step-num">03</div><div class="step-body"><h3>Agile Development</h3><p>2-week sprints with working demos. You see progress constantly — no surprise at the end.</p></div></div>
+    <div class="process-step reveal d4"><div class="step-num">04</div><div class="step-body"><h3>QA & Testing</h3><p>Automated tests, manual QA, security checks and performance benchmarks before any release.</p></div></div>
+    <div class="process-step reveal d5"><div class="step-num">05</div><div class="step-body"><h3>Launch & Support</h3><p>Smooth deployment with handover documentation. 3 months of free post-launch support included.</p></div></div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="section">
+  <div class="sec-hd centered reveal">
+    <div class="eyebrow">Technologies</div>
+    <h2 class="sec-title">Our Tech Stack</h2>
+    <p class="sec-sub">We choose the right tool for the job — not the trending one.</p>
+  </div>
+  <div class="tech-grid reveal">
+    <div class="tech-chip"><span>⚛️</span>React</div><div class="tech-chip"><span>▲</span>Next.js</div>
+    <div class="tech-chip"><span>🐦</span>Flutter</div><div class="tech-chip"><span>🟦</span>TypeScript</div>
+    <div class="tech-chip"><span>🟢</span>Node.js</div><div class="tech-chip"><span>🐍</span>Python</div>
+    <div class="tech-chip"><span>🐘</span>PostgreSQL</div><div class="tech-chip"><span>🍃</span>MongoDB</div>
+    <div class="tech-chip"><span>🐳</span>Docker</div><div class="tech-chip"><span>☁️</span>AWS</div>
+    <div class="tech-chip"><span>🔥</span>Firebase</div><div class="tech-chip"><span>⚡</span>Redis</div>
+    <div class="tech-chip"><span>🤖</span>OpenAI</div><div class="tech-chip"><span>🔧</span>Arduino</div>
+    <div class="tech-chip"><span>🥧</span>Raspberry Pi</div><div class="tech-chip"><span>📊</span>Grafana</div>
+    <div class="tech-chip"><span>🏗️</span>Django</div><div class="tech-chip"><span>⚙️</span>FastAPI</div>
+    <div class="tech-chip"><span>🔐</span>JWT/OAuth</div><div class="tech-chip"><span>📡</span>MQTT</div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="cta-box reveal" style="background:linear-gradient(135deg,var(--card) 0%,rgba(59,130,246,.08) 100%);border:1px solid var(--border2);border-radius:var(--radius2);padding:4rem 3rem;text-align:center;max-width:800px;margin:0 auto">
+    <div class="eyebrow" style="justify-content:center;margin-bottom:1rem">Get Started</div>
+    <h2 class="sec-title gt">Not sure which service you need?</h2>
+    <p style="color:var(--text2);margin-bottom:2rem">Tell us about your idea. Our free consultation will map the right solution to your goals and budget.</p>
+    <a href="contact.html" class="btn btn-p">Book Free Consultation →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-grid">
+    <div>
+      <a href="index.html" class="nav-logo" style="font-size:1.3rem">BLACK<span class="x">FORGE</span>X</a>
+      <p class="ft-desc">Akola's premier software development company. Building digital solutions across Maharashtra and India.</p>
+      <div class="ft-socials">
+        <a href="#" class="ft-social">in</a><a href="#" class="ft-social">𝕏</a><a href="#" class="ft-social">ig</a>
+        <a href="https://wa.me/918308966290" class="ft-social">wa</a>
+      </div>
+    </div>
+    <div class="ft-col"><h4>Services</h4><ul><li><a href="services.html">Custom Software</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Mobile Apps</a></li><li><a href="services.html">IoT Solutions</a></li></ul></div>
+    <div class="ft-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="ft-col"><h4>Contact</h4><ul><li><a href="tel:+918308966290">+91 83089 66290</a></li><li><a href="mailto:atharva.sunil.zade@gmail.com">Email Us</a></li><li><a href="https://wa.me/918308966290">WhatsApp</a></li></ul></div>
+  </div>
+  <div class="ft-bottom"><p>© 2026 BlackForgeX Private Limited.</p><p>Akola, Maharashtra, India</p></div>
+</footer>
+<a href="https://wa.me/918308966290" class="wa-btn" target="_blank">💬</a>
+<script src="js/main.js"></script>
+</body>
+</html>
